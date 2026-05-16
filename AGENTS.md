@@ -49,7 +49,7 @@ Before finishing any session, agents must run quality checks, update issue statu
 
 ## Working with Templates
 
-When applying the MVA heuristic to a new problem, begin by copying the appropriate templates from the [[templates/]] directory. Use [[templates/MVA.md]] as the primary living document during iteration. Only move to [[templates/SPEC.md]] and [[templates/DESIGN.md]] once the MVA journal indicates that a stable architecture has emerged.
+When applying the MVA heuristic to a new problem, begin by copying the appropriate templates from the `templates/` directory (starting with [[templates/MVA.md]]). Use [[templates/MVA.md]] as the primary living document during iteration. Only move to [[templates/SPEC.md]] and [[templates/DESIGN.md]] once the MVA journal indicates that a stable architecture has emerged.
 
 All generated documents should follow `lat.md` conventions, including the requirement that every section begins with a leading paragraph that establishes its identity.
 

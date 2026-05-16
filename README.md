@@ -25,18 +25,43 @@ The entire process is still the **"plan phase."** The production system is the o
 - **Governance Layer as Source of Truth** — The rebuild plan is derived from post-experience synthesis, not from the original request.
 - **Minimum Viable Stress** — No governance extraction without real failures and evolved cross-cutting concerns.
 
+## Document Lifecycle
+
+The MVA heuristic follows a strict sequence:
+
+1. **Discovery** — Create and maintain a living [[MVA.md]] journal while iteratively building a real, runnable architecture.
+2. **Formalization** — Once the MVA is validated, decompose its learnings into [[DESIGN.md]] and [[SPEC.md]].
+3. **Goal Synthesis** — Produce [[GOAL.md]] from the completed [[MVA.md]] + [[DESIGN.md]] + [[SPEC.md]].
+4. **Retirement** — Delete the original [[MVA.md]].
+5. **Mapping** — Finalize [[LAT.md]] after [[GOAL.md]] exists but before execution.
+6. **Execution** — Run the goal backed by [[DESIGN.md]], [[SPEC.md]], and [[LAT.md]].
+
+This order ensures formal documentation is grounded in real experience rather than speculation.
+
+## How to Apply the Heuristic
+
+When facing a high-uncertainty architectural problem:
+
+- Copy the templates from the `templates/` directory (starting with [[templates/MVA.md]]) into your project.
+- Maintain [[MVA.md]] as a living journal during iteration (record what worked and what did not).
+- Only move to [[DESIGN.md]] and [[SPEC.md]] after the MVA is stable.
+- Synthesize [[GOAL.md]] from all three, then delete the MVA journal.
+- Update [[LAT.md]] for agent navigation before execution.
+
+Treat the MVA phase as the primary learning period. Honest recording of failures in the journal produces significantly stronger final documentation.
+
 ## Repository Structure
 
-The repository is deliberately minimal at the root:
+The repository is deliberately minimal at the root. The three primary production documents are:
 
-- [[AGENTS.md]] — Primary entry point and meta-instructions for any agent.
+- [[AGENTS.md]] — Entry point and meta-instructions for the MVA heuristic.
 - [[LAT.md]] — Structured knowledge graph and cross-project mappings.
 - [[SKILL.md]] — Adaptive, non-deterministic logic with progressive disclosure.
-- [[README.md]] — This file.
-- [[resources/]] — Detailed explanations of the methodology and lifecycle.
-- [[templates/]] — Production-grade, variable-driven templates for applying the heuristic.
 
-The four working documents used when tackling a new problem ([[MVA.md]], [[SPEC.md]], [[DESIGN.md]], [[GOAL.md]]) live as clean templates in the [[templates/]] directory.
+All other content lives in:
+
+- `templates/` directory — Production-grade templates for [[templates/MVA.md]], [[templates/SPEC.md]], [[templates/DESIGN.md]], and [[templates/GOAL.md]] (with variables).
+- `references/` directory — Supporting technical references (e.g. [[references/phase-gates.md]]).
 
 ## Recommended Reading Order for Agents
 
@@ -45,34 +70,26 @@ The four working documents used when tackling a new problem ([[MVA.md]], [[SPEC.
     ↓
 [[LAT.md]] + [[SKILL.md]]
     ↓
-[[resources/]] (for deep understanding)
-    ↓
-[[templates/]] (when starting new work)
+the `templates/` directory (starting with [[templates/MVA.md]]) when starting work on a new problem
 ```
 
-This order ensures agents first internalize the rules and accumulated knowledge before creating new `MVA.md` journals.
+This ensures agents understand the rules and accumulated knowledge before creating new MVA journals.
 
 ## Project Structure
 
 ```
 .
-├── AGENTS.md                   # Entry point + meta-instructions for the MVA heuristic
-├── LAT.md                      # Structured knowledge graph (lat.md style)
-├── SKILL.md                    # Adaptive, nuanced logic (progressive disclosure)
-├── MVA.md                      # Living journal of iteration (written during discovery)
-├── SPEC.md                     # Formal technical specification (post-MVA)
-├── DESIGN.md                   # Detailed technical design (post-MVA)
-├── GOAL.md                     # Executable contract (synthesized from MVA + SPEC + DESIGN)
-├── templates/
-│   ├── MVA.md                  # Template for the living journal (lat.md style)
-│   ├── SPEC.md                 # Template for the formal spec
-│   ├── DESIGN.md               # Template for technical design
-│   └── GOAL.md                 # Template for the executable goal
+├── AGENTS.md
+├── LAT.md
+├── SKILL.md
 ├── README.md
-├── commands/
-│   └── heuristics.md
-└── .grok/skills/heuristics/
-    └── SKILL.md
+├── templates/
+│   ├── MVA.md
+│   ├── SPEC.md
+│   ├── DESIGN.md
+│   └── GOAL.md
+├── references/
+└── commands/
 ```
 
 ## Current Status (May 2026)
