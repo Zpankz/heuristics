@@ -1,29 +1,52 @@
+---
+lat:
+  require-code-mention: false
+---
+
 # GOAL
 
-## North Star
+**Purpose of the MVA Heuristic**
 
-**Heuristics exists to make the discovery of correct software architecture an empirical, first-principles, and repeatable discipline rather than an act of high-variance speculation.**
+This document states the fundamental purpose and long-term aspirations of the MVA heuristic.
 
-We believe that for systems with significant architectural uncertainty (novel orchestration, complex distributed state, cross-cutting governance, or domains without strong local precedent), the highest-leverage planning activity is not writing a document — it is building the smallest possible runnable probe, stressing it until it reveals its true shape, extracting the durable invariants and contracts from that stress, and only then building the production system from those extracted truths.
+---
 
-## Success in 18–36 Months
+## Core Aspiration
 
-- A meaningful percentage of complex agentic, distributed, and orchestration-heavy systems in the user's (and eventually the broader ECC) ecosystem are planned using the Heuristics methodology instead of (or in addition to) traditional speculative planning.
-- The governance layers produced by Heuristics runs become high-quality, reusable assets that improve the quality of subsequent systems (both within a project and across projects via the Living Architecture Trace).
-- The methodology has been battle-tested on at least 8–12 real, high-stakes architectural problems, and the phase gates, artifact formats, and Minimum Viable Stress criteria have been refined from that evidence.
-- Clear signals exist that Heuristics produces measurably better architectural outcomes (fewer late-stage refactors, stronger observability from day one, fewer "we wish we had known X earlier" incidents) than pure speculative planning on equivalent classes of problems.
-- The skill is mature enough that both strong and default models can run high-quality Heuristics sessions with appropriate scaffolding.
+The MVA heuristic exists to make the discovery of correct software architecture a repeatable, evidence-based discipline rather than a high-variance act of speculation.
 
-## What We Will Not Optimize For
+It achieves this by requiring practitioners to build a real, runnable Minimally Viable Architecture, record the journey honestly in a living journal, and only then produce formal technical documentation and executable goals.
 
-- Speed of initial planning (Heuristics is deliberately slower in the short term because it invests in discovery).
-- Breadth (we optimize for depth on high-uncertainty problems; we explicitly recommend traditional planning tools for well-understood increments).
-- Making the MVA "good enough to ship" (the MVA is planning debt by design).
+---
 
-## The Ultimate Measure
+## Success Vision
 
-When an engineer or agent looks at a complex system that was planned with Heuristics and says:
+In the long term, the methodology produces systems whose architecture feels as if it was designed by someone who had already lived through its failure modes.
 
-> "This architecture feels like it was designed by someone who had already lived through its failure modes."
+Agents and humans using the heuristic routinely generate `GOAL.md` documents that are both ambitious and grounded in validated practical experience.
 
-That is success.
+The set of documents (`MVA.md`, `DESIGN.md`, `SPEC.md`, `GOAL.md`, `LAT.md`) becomes a recognized, high-signal pattern for tackling architectural uncertainty.
+
+---
+
+## Key Principles
+
+`MVA.md` must be written progressively during real work, not summarized afterward.
+
+Formal documentation (`DESIGN.md` and `SPEC.md`) is only created after a MVA has been validated through iteration.
+
+`GOAL.md` must carry forward both clear aspiration and the specific, hard-won learnings from the MVA phase.
+
+All documents follow `lat.md` conventions to maximize agent navigability and long-term knowledge retention.
+
+---
+
+## Scope
+
+The heuristic focuses on problems with genuine architectural uncertainty, especially those involving orchestration, distributed state, cross-cutting governance, or domains without strong local precedent.
+
+It is explicitly not intended for incremental work on well-understood patterns.
+
+---
+
+*This goal is realized every time a practitioner completes a high-quality `MVA.md` journal, derives strong `DESIGN.md` and `SPEC.md` from it, and produces a `GOAL.md` that enables successful execution.*

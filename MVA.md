@@ -3,91 +3,65 @@ lat:
   require-code-mention: false
 ---
 
-# MVA — MVA Heuristic Document System
+# MVA
 
-**Status:** In Progress  
-**Started:** 2026-05-16  
-**Last Updated:** {{CURRENT_DATE}}  
-**Owner:** Grok (in collaboration with user)
+**MVA.md — The Living Journal of Architectural Discovery**
 
----
-
-## Purpose
-
-This document is the living journal for the development of the MVA heuristic itself.
-
-It records the iterative process of discovering what `MVA.md` should be as a first-class, peer-level document in the set that includes `AGENTS.md`, `LAT.md`, `SPEC.md`, `DESIGN.md`, and `GOAL.md`.
-
-The goal is to design `MVA.md` such that it functions effectively as a dynamic, progressively written journal during real architectural discovery work.
+This document follows `lat.md` conventions. Every section begins with a leading paragraph.
 
 ---
 
-## Starting Context
+## Role in the Methodology
 
-The project began with a desire to invert traditional planning by using a sacrificial, runnable MVA to generate real architectural understanding before producing formal specifications and goals.
+`MVA.md` is the primary working document during the discovery phase of the MVA heuristic.
 
-Early documents treated `MVA.md` primarily as a template or example. Through discussion, it became clear that `MVA.md` must instead be a **living journal** of what worked and what did not during active iteration.
+It functions as a living journal in which the agent and user record what was tried, what succeeded, what failed, and how architectural understanding evolved while building a real, runnable Minimally Viable Architecture.
 
-This realization elevated `MVA.md` to the status of a core heuristic document on equal footing with the others.
-
----
-
-## Cycle 001 — Clarifying the Role of MVA.md — 2026-05-16
-
-**Hypothesis going into this cycle:**
-
-`MVA.md` should be a structured template that agents fill out once, similar to other planning documents.
-
-**What was tried:**
-
-Multiple versions of `MVA.md` were written with varying levels of formality, some closer to a spec and some closer to a journal.
-
-**What worked:**
-
-The explicit statement that `MVA.md` is a "living journal of what worked and what didn't until a real MVA is achieved" provided immediate clarity.
-
-**What didn't work / Pain points:**
-
-Treating `MVA.md` as a static or pre-filled document conflicted with the fundamental idea of generative, empirical discovery through iteration.
-
-**Key insight:**
-
-`MVA.md` is not the output of planning. It *is* the planning process, captured in real time.
-
-**Updated direction:**
-
-Design `MVA.md` primarily as an iterative journal that follows `lat.md` conventions, supports progressive writing during work, and is only later decomposed into `DESIGN.md` and `SPEC.md`.
+Unlike `SPEC.md` or `DESIGN.md`, `MVA.md` is intentionally temporary and is deleted once its purpose is fulfilled.
 
 ---
 
-## Current State of the MVA
+## Lifecycle Position
 
-The current working understanding is that `MVA.md` should:
+`MVA.md` is created and maintained first.
 
-- Be written dynamically while building and stressing a real architecture.
-- Follow `lat.md` section rules (leading paragraphs, clear identity).
-- Record both successes and failures honestly.
-- Serve as the primary source from which `DESIGN.md`, `SPEC.md`, and eventually `GOAL.md` are derived.
-- Be deleted once `GOAL.md` is finalized.
+Only after it demonstrates a validated, working architecture does the team decompose its learnings into the more permanent `DESIGN.md` and `SPEC.md`.
 
-Templates for `MVA.md`, `SPEC.md`, `DESIGN.md`, and `GOAL.md` have been created in `templates/` to support this workflow.
+These three documents are then used together to produce `GOAL.md`.
+
+After `GOAL.md` is finalized, `MVA.md` is removed.
 
 ---
 
-## Remaining Areas of Uncertainty
+## How to Use This Document
 
-- What is the ideal granularity and rhythm for adding new cycles to a `MVA.md` journal during active work?
-- How much structure should be enforced in `MVA.md` versus allowing more free-form narrative when it better captures the lived experience?
-- How should agents be instructed (via `SKILL.md` and `AGENTS.md`) to maintain the journal without it becoming burdensome?
+Copy the template from `templates/MVA.md` into the root of a new project when beginning work on a high-uncertainty architectural problem.
 
----
+Add new cycles or phases as iteration progresses. Record both positive and negative outcomes honestly.
 
-## Next Steps
-
-Continue refining the `MVA.md` template and the supporting instructions in `SKILL.md` and `AGENTS.md` while applying the heuristic to real problems.
-
-The next significant cycle will likely involve using the current `MVA.md` template on an actual high-uncertainty architectural problem and observing what needs to change.
+Treat this file as the single source of truth for what actually happened during the MVA construction process.
 
 ---
 
-*This document is itself an instance of the MVA heuristic in action. It will continue to evolve until the architecture of `MVA.md` as a first-class document feels stable and well-understood.*
+## Production Usage
+
+When applying the MVA heuristic:
+
+- Begin writing `MVA.md` immediately as work starts.
+- Update it continuously throughout iteration.
+- Do not attempt to formalize `DESIGN.md` or `SPEC.md` until the journal indicates that a stable MVA has been achieved.
+
+This discipline ensures that formal documentation is grounded in real experience rather than speculation.
+
+---
+
+## Relationship to Other Documents
+
+- `AGENTS.md` and `SKILL.md` provide the instructions and adaptive logic for maintaining `MVA.md`.
+- `LAT.md` maps concepts discovered in various `MVA.md` journals across projects.
+- `SPEC.md` and `DESIGN.md` are the direct technical descendants of a completed `MVA.md`.
+- `GOAL.md` is synthesized from a completed `MVA.md` together with its derived `SPEC.md` and `DESIGN.md`.
+
+---
+
+*This document is the production-ready definition of `MVA.md`. For the detailed template with variables and iterative structure, see `templates/MVA.md`.*
