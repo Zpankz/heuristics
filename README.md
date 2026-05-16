@@ -1,4 +1,4 @@
-# Heuristics — Generative Planning Through Sacrificial Scaffolding
+# MVA — Generative Planning Through Sacrificial Scaffolding (MVA Heuristic)
 
 This repository is the canonical development location for the **Heuristics** planning skill — an inverted, empirical alternative to traditional speculative planning frameworks (Prometheus, `ce-plan`, `blueprint`).
 
@@ -86,11 +86,10 @@ This hierarchy ensures agents encounter the *accumulated practice* (`LAT.md`) be
 ## Installation (Local Development)
 
 ```bash
-# Symlink into your personal skills directory
-ln -s ~/ideas/heuristics ~/.agents/skills/heuristics
-
-# Or copy
-cp -r ~/ideas/heuristics ~/.agents/skills/heuristics
+# After cloning https://github.com/Zpankz/mva
+ln -s ~/path/to/mva ~/.agents/skills/mva
+# or
+cp -r ~/path/to/mva ~/.agents/skills/mva
 ```
 
 After installation, `/heuristics <objective>` becomes available in Claude Code.
