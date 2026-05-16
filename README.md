@@ -23,23 +23,40 @@ The entire process is still the **"plan phase."** The production system is the o
 - **Governance Layer as Source of Truth** — The rebuild plan is derived from post-experience synthesis, not from the original request.
 - **Minimum Viable Stress** — No governance extraction without real failures and evolved cross-cutting concerns.
 
+## Canonical Documents (Read in This Order)
+
+| Document | Purpose | Audience |
+|----------|---------|----------|
+| `GOAL.md` | North star, success criteria, what we deliberately do *not* optimize for | Everyone (especially new readers) |
+| `SPEC.md` | Formal, versioned specification of the H0–H5 methodology, phase gates, artifact contracts, and traceability requirements | Implementers, reviewers, contributors |
+| `DESIGN.md` | Architectural and implementation design of the *skill* (dual Claude/Grok adapters, shared template layer, extensibility model) | Skill developers, integrators |
+| `LAT.md` | **Living Architecture Trace** — cumulative wisdom from real Heuristics runs across projects (meta-heuristics, schema evolution, gate refinements) | Deep practitioners, methodology contributors |
+
+These four documents together form the "source of truth" layer for the methodology.
+
+The `SKILL.md` files (Claude and Grok) are *implementations* of the spec, not the spec itself.
+
 ## Project Structure
 
 ```
 .
-├── SKILL.md                    # Main skill definition (philosophy, H0–H5 workflow, guardrails)
-├── README.md                   # This file
+├── GOAL.md                     # North star and success criteria
+├── SPEC.md                     # Canonical methodology specification (v0.1)
+├── DESIGN.md                   # Skill architecture and harness strategy
+├── LAT.md                      # Living Architecture Trace (cumulative learnings)
+├── SKILL.md                    # Claude Code skill definition
+├── README.md
+├── AGENTS.md
 ├── commands/
-│   └── heuristics.md           # Slash command definition for /heuristics
-├── templates/
-│   ├── mva-spec.md             # H0 output template
-│   ├── iteration-log.md        # H2 living document template
-│   ├── heuristics-catalog.md   # Curated high-confidence heuristics
-│   └── governance-layer.md     # H3 primary synthesis artifact (the real "plan")
-└── references/                 # (future) Detailed phase workflows, anti-patterns, integration guides
+│   └── heuristics.md
+├── templates/                  # Shared artifact templates (mva-spec, governance-layer, etc.)
+├── references/
+│   └── phase-gates.md
+└── .grok/skills/heuristics/
+    └── SKILL.md                # Grok-native packed skill (project-scoped)
 ```
 
-## Current Status (April 2026)
+## Current Status (May 2026)
 
 - Core philosophy and H0–H5 subphase model defined in `SKILL.md`
 - Command, templates, and artifact formats created
