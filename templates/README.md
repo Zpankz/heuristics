@@ -27,10 +27,10 @@ The correct flow is:
 
 | Template | Purpose | When to Use | Style |
 |----------|---------|-------------|-------|
-| `MVA.md` | Living journal of iteration ("what worked / what didn't") | During the active discovery and MVA-building phase | Iterative, journal-style, `lat.md` conventions |
-| `SPEC.md` | Formal, stable technical specification | After `MVA.md` is validated and complete | Structured, precise, `lat.md` conventions |
-| `DESIGN.md` | Detailed technical design and implementation approach | After `MVA.md` is validated and complete | Technical depth, `lat.md` conventions |
-| `GOAL.md` | Rich executable contract for long-running work | After `MVA.md` + `SPEC.md` + `DESIGN.md` exist | Aspirational + practical, includes motivation, learnings, and anticipated difficulties |
+| [[MVA.md]] | Living journal of iteration ("what worked / what didn't") | During the active discovery and MVA-building phase | Iterative, journal-style, `lat.md` conventions |
+| [[SPEC.md]] | Formal, stable technical specification | After [[MVA.md]] is validated and complete | Structured, precise, `lat.md` conventions |
+| [[DESIGN.md]] | Detailed technical design and implementation approach | After [[MVA.md]] is validated and complete | Technical depth, `lat.md` conventions |
+| [[GOAL.md]] | Rich executable contract for long-running work | After [[MVA.md]] + [[SPEC.md]] + [[DESIGN.md]] exist | Aspirational + practical, includes motivation, learnings, and anticipated difficulties |
 
 ## MVA.md Generation Style
 

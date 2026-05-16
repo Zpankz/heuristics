@@ -29,25 +29,25 @@ The entire process is still the **"plan phase."** The production system is the o
 
 The repository is deliberately minimal at the root:
 
-- `AGENTS.md` — Primary entry point and meta-instructions for any agent.
-- `LAT.md` — Structured knowledge graph and cross-project mappings.
-- `SKILL.md` — Adaptive, non-deterministic logic with progressive disclosure.
-- `README.md` — This file.
-- `resources/` — Detailed explanations of the methodology and lifecycle.
-- `templates/` — Production-grade, variable-driven templates for applying the heuristic.
+- [[AGENTS.md]] — Primary entry point and meta-instructions for any agent.
+- [[LAT.md]] — Structured knowledge graph and cross-project mappings.
+- [[SKILL.md]] — Adaptive, non-deterministic logic with progressive disclosure.
+- [[README.md]] — This file.
+- [[resources/]] — Detailed explanations of the methodology and lifecycle.
+- [[templates/]] — Production-grade, variable-driven templates for applying the heuristic.
 
-The four working documents used when tackling a new problem (`MVA.md`, `SPEC.md`, `DESIGN.md`, `GOAL.md`) live as clean templates in the `templates/` directory.
+The four working documents used when tackling a new problem ([[MVA.md]], [[SPEC.md]], [[DESIGN.md]], [[GOAL.md]]) live as clean templates in the [[templates/]] directory.
 
 ## Recommended Reading Order for Agents
 
 ```
-AGENTS.md
+[[AGENTS.md]]
     ↓
-LAT.md + SKILL.md
+[[LAT.md]] + [[SKILL.md]]
     ↓
-resources/ (for deep understanding)
+[[resources/]] (for deep understanding)
     ↓
-templates/ (when starting new work)
+[[templates/]] (when starting new work)
 ```
 
 This order ensures agents first internalize the rules and accumulated knowledge before creating new `MVA.md` journals.
