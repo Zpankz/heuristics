@@ -28,9 +28,6 @@ __pycache__/
 
 # Artifacts generated during use (runtime)
 artifacts/
-mva/
 governance/
 iteration-*.md
 heuristics-catalog-*.md
-
-# Keep the templates and references, but runtime instances go in user's project
